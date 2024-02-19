@@ -166,7 +166,7 @@
         }
     }
 </p>
-<h5>Le fichier config.txt : </h5>
+<h3>Le fichier config.txt : </h3>
 <p>
     <b>
         <p>dao.IDaoImpl</p>
