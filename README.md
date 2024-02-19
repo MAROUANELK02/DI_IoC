@@ -90,6 +90,7 @@
 <h3>5/- l'injection des dépendances :</h3>
 <h4>a.	Par instanciation statique :</h4>
 <p>
+    
     package presentation;
     
     import dao.IDaoImpl;
