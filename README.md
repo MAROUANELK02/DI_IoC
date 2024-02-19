@@ -112,7 +112,6 @@
 
 <p>
     package presentation;
-    
     import dao.IDaoImpl;
     import ext.IDaoImpl2;
     import metier.IMetierImpl;
@@ -125,7 +124,6 @@
     
             metier.setDao(dao2);
             System.out.println("Résultat : "+metier.calcul());
-    
         }
     }
 </p>
