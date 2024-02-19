@@ -136,7 +136,7 @@
 </p>
 <img src="images/img_2.png"></img>
 
-<h4>a.	Par instanciation dynamique :</h4>
+<h4>b.	Par instanciation dynamique :</h4>
 <p>
 
     package presentation;
