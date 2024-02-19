@@ -38,6 +38,7 @@
 <h2>Partie 1 :</h2>
 <h3>1/- L’interface IDao : </h3>
 <p>
+    
     package dao;
 
     public interface IDao {
@@ -47,6 +48,7 @@
 
 <h3>2/- Implémentation : </h3>
 <p>
+    
     package dao;
 
     public class IDaoImpl implements IDao {
@@ -59,6 +61,7 @@
 
 <h3>3/- L’interface IMetier :</h3>
 <p>
+    
     package metier;
 
     public interface IMetier {
@@ -68,6 +71,7 @@
 
 <h3>4/-  L’implémentation de cette interface en utilisant le couplage faible :</h3>
 <p>
+    
     package metier;
     
     import dao.IDao;
