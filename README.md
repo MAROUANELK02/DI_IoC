@@ -54,7 +54,7 @@
         public double getData() {
             return Math.random()*40;
         }
-}
+    }
 </p>
 
 <h3>3/- L’interface IMetier :</h3>
@@ -108,28 +108,29 @@
         }
     }
 </p>
-<img src="images/img1.png"></img>
+<img src="images/img_1.png"></img>
 
-
- 
-
-package presentation;
-
-import dao.IDaoImpl;
-import ext.IDaoImpl2;
-import metier.IMetierImpl;
-
-public class Main {
-    public static void main(String[] args) {
-        IDaoImpl dao = new IDaoImpl();
-        IDaoImpl2 dao2 = new IDaoImpl2();
-        IMetierImpl metier = new IMetierImpl();
-
-        metier.setDao(dao2);
-        System.out.println("Résultat : "+metier.calcul());
-
+<p>
+    package presentation;
+    
+    import dao.IDaoImpl;
+    import ext.IDaoImpl2;
+    import metier.IMetierImpl;
+    
+    public class Main {
+        public static void main(String[] args) {
+            IDaoImpl dao = new IDaoImpl();
+            IDaoImpl2 dao2 = new IDaoImpl2();
+            IMetierImpl metier = new IMetierImpl();
+    
+            metier.setDao(dao2);
+            System.out.println("Résultat : "+metier.calcul());
+    
+        }
     }
-}
+</p>
+
+
 
 
 
