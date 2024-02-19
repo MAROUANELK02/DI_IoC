@@ -18,8 +18,8 @@ public class Pres2 {
         Class cMetier = Class.forName(metierClassName);
         IMetier metier = (IMetier) cMetier.getDeclaredConstructor(IDao.class).newInstance(dao);
 
-        /*Method method = cMetier.getMethod("setDao",IDao.class);
-        method.invoke(metier,dao);*/
+        //Method method = cMetier.getMethod("setDao",IDao.class);
+        //method.invoke(metier,dao);
 
         System.out.println(metier.calcul());
     }

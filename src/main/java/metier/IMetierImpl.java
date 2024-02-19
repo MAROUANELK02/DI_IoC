@@ -11,9 +11,9 @@ public class IMetierImpl implements IMetier {
     @Qualifier("dao2")
     private IDao dao;
 
-    /*public IMetierImpl(IDao dao) {
+    public IMetierImpl(IDao dao) {
         this.dao = dao;
-    }*/
+    }
 
     @Override
     public double calcul() {
