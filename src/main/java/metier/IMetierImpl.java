@@ -7,11 +7,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class IMetierImpl implements IMetier {
-    @Autowired
-    @Qualifier("dao2")
     private IDao dao;
 
-    public IMetierImpl(IDao dao) {
+    public IMetierImpl(@Qualifier("dao") IDao dao) {
         this.dao = dao;
     }
 
