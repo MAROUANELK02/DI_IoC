@@ -183,6 +183,39 @@
 </p>
 <img src="images/img_4.png"></img>
 
+<h4>c.	En utilisant le Framework Spring:</h4>
+<h5>- Version XML</h5>
+<p>J’ai créé un projet java avec maven comme un « Build system » et j’ai ajouté les dépendances Spring Core , Spring Context et Spring Beans version 5.3.16. J’ai créé un fichier applicationContext.xml où j’ai mis les Beans :
+</p>
+<p>
+    
+    <?xml version="1.0" encoding="UTF-8"?>
+    <beans xmlns="http://www.springframework.org/schema/beans"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="dao" class="ext.IDaoImpl2"></bean>
+        <bean id="metier" class="metier.IMetierImpl">
+            <property name="dao" ref="dao"></property>
+        </bean>
+    </beans>
+
+</p>
+<p>
+    
+    package presentation;
+    
+    import metier.IMetier;
+    import org.springframework.context.ApplicationContext;
+    import org.springframework.context.support.ClassPathXmlApplicationContext;
+    
+    public class PresSpringXML {
+        public static void main(String[] args) {
+            ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+            IMetier metier = (IMetier) context.getBean("metier");
+            System.out.println(metier.calcul());
+        }
+    }
+</p>
 
 
 
