@@ -169,8 +169,8 @@
 <h5>Le fichier config.txt : </h5>
 <p>
     <b>
-        dao.IDaoImpl
-        metier.IMetierImpl
+        <p>dao.IDaoImpl</p>
+        <p>metier.IMetierImpl</p>
     </b>
 </p>
 <img src="images/img_3.png"></img>
