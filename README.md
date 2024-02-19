@@ -177,8 +177,8 @@
 
 <p>
     <b>
-        ext.IDaoImpl2
-        metier.IMetierImpl
+        <p>ext.IDaoImpl2</p>
+        <p>metier.IMetierImpl</p>
     </b>
 </p>
 <img src="images/img_4.png"></img>
