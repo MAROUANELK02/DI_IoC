@@ -217,7 +217,7 @@
     }
 </p>
 <img src="images/img_5.png"></img>
-<p>Si on change ext.IDaoImpl2 par dao.IDaoImpl dans le fichier applicationContext.xml :</p>
+<p>Si on change <b>ext.IDaoImpl2</b> par <b>dao.IDaoImpl</b> dans le fichier applicationContext.xml :</p>
 <img src="images/img_6.png"></img>
 <h5>- Version annotations : </h5>
 <p>
