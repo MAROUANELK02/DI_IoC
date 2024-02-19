@@ -184,7 +184,7 @@
 <img src="images/img_4.png"></img>
 
 <h4>c.	En utilisant le Framework Spring:</h4>
-<h5>- Version XML</h5>
+<h5>- Version XML : </h5>
 <p>J’ai créé un projet java avec maven comme un « Build system » et j’ai ajouté les dépendances Spring Core , Spring Context et Spring Beans version 5.3.16. J’ai créé un fichier applicationContext.xml où j’ai mis les Beans :
 </p>
 <p>
@@ -216,6 +216,74 @@
         }
     }
 </p>
+<img src="images/img_5.png"></img>
+<p>Si on change ext.IDaoImpl2 par dao.IDaoImpl dans le fichier applicationContext.xml :</p>
+<img src="images/img_6.png"></img>
+<h5>- Version annotations : </h5>
+<p>
+    
+    package dao;
+    
+    import org.springframework.stereotype.Component;
+    
+    @Component("dao")
+    public class IDaoImpl implements IDao {
+        @Override
+        public double getData() {
+            System.out.println("Version base de données");
+            return Math.random()*40;
+        }
+    }
+
+</p>
+<p>
+
+    package metier;
+    
+    import dao.IDao;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.beans.factory.annotation.Qualifier;
+    import org.springframework.stereotype.Component;
+    
+    @Component
+    public class IMetierImpl implements IMetier {
+        private IDao dao;
+    
+        public IMetierImpl(@Qualifier("dao2") IDao dao) {
+            this.dao = dao;
+        }
+    
+        @Override
+        public double calcul() {
+            double tmp = dao.getData();
+            double res = tmp*540/Math.cos(tmp*Math.PI);
+            return res;
+        }
+    
+        public void setDao(IDao dao) {
+            this.dao = dao;
+        }
+    }
+
+</p>
+<p>
+    
+    package presentation;
+    
+    import metier.IMetier;
+    import org.springframework.context.ApplicationContext;
+    import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+    
+    public class PresSpringAnnotation {
+        public static void main(String[] args) {
+            ApplicationContext context = new AnnotationConfigApplicationContext("metier","dao","ext");
+            IMetier metier = context.getBean(IMetier.class);
+            System.out.println(metier.calcul());
+        }
+    }
+    
+</p>
+<img src="images/img_7.png"></img>
 
 
 
