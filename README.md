@@ -184,7 +184,7 @@
 <img src="images/img_4.png"></img>
 
 <h4>c.	En utilisant le Framework Spring:</h4>
-<h5>- Version XML : </h5>
+<h4>- Version XML : </h4>
 <p>J’ai créé un projet java avec maven comme un « Build system » et j’ai ajouté les dépendances Spring Core , Spring Context et Spring Beans version 5.3.16. J’ai créé un fichier applicationContext.xml où j’ai mis les Beans :
 </p>
 <p>
@@ -219,7 +219,7 @@
 <img src="images/img_5.png"></img>
 <p>Si on change <b>ext.IDaoImpl2</b> par <b>dao.IDaoImpl</b> dans le fichier applicationContext.xml :</p>
 <img src="images/img_6.png"></img>
-<h5>- Version annotations : </h5>
+<h4>- Version annotations : </h4>
 <p>
     
     package dao;
